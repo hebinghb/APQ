@@ -26,9 +26,11 @@ Import.DDA <- function(filename, ...) {
 		# MaxQuant peptides
 		raw_data <- read.csv(file=filename,sep = "\t")
 		colname <- colnames(raw_data)
-		Proteins <- raw_data$Proteins
 		# Remove Contamination
-		clean_data <- raw_data[-(grep("CON_",Proteins)),]
+		Proteins <- raw_data$Proteins
+		temp_data <- raw_data[-(grep("CON_",Proteins)),]
+		Proteins <- temp_data$Leading
+		clean_data <- temp_data[-(grep("REV_",Proteins)),]
 		ms_data<-clean_data[c("Proteins","Gene.names","Protein.names",colname[grep("Intensity.",colname)])]
 		return(ms_data)
   
