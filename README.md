@@ -31,17 +31,23 @@ library(APQ)
 #Load DIA data
 
 ##For MS2 data from Spectronaut
+
 data<-Import(filename="20181028_202636_HLS9_36_WILD_Report.csv",filetype="spectronaut")
-##20181028_202636_HLS9_36_WILD_Report.csv should include following columns:"R.FileName","PG.ProteinAccessions","EG.StrippedSequence","F.PeakArea". CSV and TSV format are supported in current version.
+
+##20181028_202636_HLS9_36_WILD_Report.csv should include following columns: "R.FileName", "PG.ProteinAccessions", "EG.StrippedSequence", "F.PeakArea". CSV and TSV format are supported in current version.
 
 ##For MS2 data from Skyline
+
 data<-Import(filename="Transition Results.csv",filetype="skyline")
-##"Transition Results.csv"  should include following columns: "Replicate.Name","Protein.Name","Peptide.Sequence","Fragment.Ion","Area".CSV and TSV format are supported in current version.
+
+##"Transition Results.csv"  should include following columns: "Replicate.Name", "Protein.Name", "Peptide.Sequence", "Fragment.Ion", "Area". CSV and TSV format are supported in current version.
 
 #APQ analysis
+
 quantity<-APQ(data,"DIA") #DIA indicates you are using DIA data.
 
 #Write APQ result to a file
+
 write.table(quantity,file="DIA_demo.txt")
 
 
@@ -52,14 +58,19 @@ write.table(quantity,file="DIA_demo.txt")
 #Demo code for DDA-APQ analysis:
 
 #Load package "APQ"
+
 library(APQ)
 
 #Load DDA data
-data<-Import.DDA("peptides.txt") 
+
+data<-Import.DDA("peptides.txt")
+
 ##peptides.txt is the output file of MaxQuant. It locates in /combined/txt/ under your MaxQuant output directory. 
 
 #APQ analysis
+
 quantity<-APQ(data,"DDA") #DDA indicates you are using DDA data.
 
 #Write APQ result to a file
+
 write.table(quantity,file="DDA_demo.txt")
