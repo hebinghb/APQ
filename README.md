@@ -12,12 +12,15 @@
 #Installation of this package on R:
 
 #Run this command if package "devtools" wasn't installed
+
 install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
 
 #Load package "devtools"
+
 library(devtools)
 
 #Install package "APQ"
+
 devtools::install_github("hebinghb/APQ")
 
 
