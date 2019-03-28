@@ -7,7 +7,7 @@ This package is developed based on TPA method and an algorithm that redistribute
 
 
 
-
+##
 ### Installation of this package on R:
 #### Run this command if package "devtools" wasn't installed
 >install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
@@ -16,7 +16,7 @@ This package is developed based on TPA method and an algorithm that redistribute
 #### Install package "APQ"
 >devtools::install_github("hebinghb/APQ")
 
-
+##
 ### Demo code for DIA-APQ (DIA-TPA) analysis:
 #### Load package "APQ"
 >library(APQ)
@@ -37,8 +37,8 @@ write.table(quantity,file="DIA_demo.txt")
 
 
 
-
-#
+##
+##
 ## This package also supports APQ analysis using data-dependent acquisition (DDA).
 ### Demo code for DDA-APQ (DDA-TPA) analysis:
 #### Load package "APQ"
