@@ -10,15 +10,15 @@ This package is developed based on TPA method and an algorithm that redistribute
 
 ### Installation of this package on R:
 
-Run this command if package "devtools" wasn't installed
+#### Run this command if package "devtools" wasn't installed
 
 >install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
 
-Load package "devtools"
+#### Load package "devtools"
 
 >library(devtools)
 
-Install package "APQ"
+#### Install package "APQ"
 
 >devtools::install_github("hebinghb/APQ")
 
@@ -27,7 +27,7 @@ Install package "APQ"
 
 ### Demo code for DIA-APQ (DIA-TPA) analysis:
 
-Load package "APQ"
+#### Load package "APQ"
 >library(APQ)
 
 #### Load DIA data
@@ -59,7 +59,7 @@ write.table(quantity,file="DIA_demo.txt")
 
 ### Demo code for DDA-APQ (DDA-TPA) analysis:
 
-Load package "APQ"
+#### Load package "APQ"
 
 >library(APQ)
 
@@ -69,7 +69,7 @@ Load package "APQ"
 
 **Note:** peptides.txt is the output file of MaxQuant. It locates in /combined/txt/ under your MaxQuant output directory. 
 
-##### APQ analysis
+#### APQ analysis
 
 >quantity<-APQ(data,"DDA") #DDA indicates you are using DDA data.
 
