@@ -9,7 +9,7 @@ This package was developed based on TPA method and an algorithm that redistribut
 ##
 ### Installation of "APQ" package on R:
 #### Run this command if package "devtools" wasn't installed
->install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+'install.packages(c("devtools", "roxygen2", "testthat", "knitr"))'
 #### Load package "devtools"
 >library(devtools)
 #### Install package "APQ"
