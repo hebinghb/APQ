@@ -3,7 +3,8 @@
 ## Label-Free Absolute Protein Quantification with Data-Independent Acquisition
 
 This is an R package for label-free absolute protein quantification (APQ) using data-independent acquisition (DIA).
-This package is developed based on TPA method and an algorithm that redistribute the MS signals from shared peptides to individual proteins or isoforms.
+
+This package was developed based on TPA method and an algorithm that redistribute the MS signals from shared peptides to individual proteins or isoforms.
 
 
 
@@ -37,7 +38,7 @@ write.table(quantity,file="DIA_demo.txt")
 
 
 
-##
+###
 ##
 ## This package also supports APQ analysis using data-dependent acquisition (DDA).
 ### Demo code for DDA-APQ (DDA-TPA) analysis:
