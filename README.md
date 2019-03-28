@@ -1,4 +1,4 @@
-# APQ
+# APQ Package
 
 ## Label-Free Absolute Protein Quantification with Data-Independent Acquisition
 
@@ -33,7 +33,7 @@ This package was developed based on TPA method and an algorithm that redistribut
 #### APQ analysis
 >quantity<-APQ(data,"DIA") #DIA indicates you are using DIA data.
 #### Write APQ result to a file
-write.table(quantity,file="DIA_demo.txt")
+>write.table(quantity,file="DIA_demo.txt")
 
 
 
