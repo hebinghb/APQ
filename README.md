@@ -9,7 +9,6 @@ This package is developed based on TPA method and an algorithm that redistribute
 
 
 ### Installation of this package on R:
-
 #### Run this command if package "devtools" wasn't installed
 
 >install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
