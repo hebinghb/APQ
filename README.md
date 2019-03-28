@@ -2,26 +2,26 @@
 
 ## Label-Free Absolute Protein Quantification with Data-Independent Acquisition
 
-#This is an R package for label-free absolute protein quantification (APQ) using data-independent acquisition (DIA).
+This is an R package for label-free absolute protein quantification (APQ) using data-independent acquisition (DIA).
 
-#This package is developed based on TPA method and an algorithm that redistribute the MS signals from shared peptides to individual proteins or isoforms.
+This package is developed based on TPA method and an algorithm that redistribute the MS signals from shared peptides to individual proteins or isoforms.
 
 
 ########################################################
 
 ### Installation of this package on R:
 
-#Run this command if package "devtools" wasn't installed
+Run this command if package "devtools" wasn't installed
 
-**install.packages(c("devtools", "roxygen2", "testthat", "knitr"))**
+>install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
 
 #Load package "devtools"
 
-library(devtools)
+>library(devtools)
 
 #Install package "APQ"
 
-devtools::install_github("hebinghb/APQ")
+>devtools::install_github("hebinghb/APQ")
 
 
 #######################################################
