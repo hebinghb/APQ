@@ -1,6 +1,4 @@
-# APQ Package
-
-## Label-Free Absolute Protein Quantification with Data-Independent Acquisition
+# Label-Free Absolute Protein Quantification with Data-Independent Acquisition
 
 This is an R package for label-free absolute protein quantification (APQ) using data-independent acquisition (DIA).
 
@@ -40,7 +38,7 @@ This package was developed based on TPA method and an algorithm that redistribut
 
 ###
 ##
-This package also supports APQ analysis using data-dependent acquisition (DDA).
+**Note:** This package also supports APQ analysis using data-dependent acquisition (DDA).
 ### Demo code for DDA-APQ (DDA-TPA) analysis:
 #### Load package "APQ"
 >library(APQ)
