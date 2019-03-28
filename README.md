@@ -23,9 +23,11 @@ This package is developed based on TPA method and an algorithm that redistribute
 #### Load DIA data
 ##### For MS2 data from Spectronaut
 >data<-Import(filename="20181028_202636_HLS9_36_WILD_Report.csv",filetype="spectronaut")
+
 **Note:** 20181028_202636_HLS9_36_WILD_Report.csv should include following columns: "R.FileName", "PG.ProteinAccessions", "EG.StrippedSequence", "F.PeakArea". CSV and TSV format are supported in current version.
 ##### For MS2 data from Skyline
 >data<-Import(filename="Transition Results.csv",filetype="skyline")
+
 **Note:** "Transition Results.csv"  should include following columns: "Replicate.Name", "Protein.Name", "Peptide.Sequence", "Fragment.Ion", "Area". CSV and TSV format are supported in current version.
 #### APQ analysis
 >quantity<-APQ(data,"DIA") #DIA indicates you are using DIA data.
