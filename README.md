@@ -1,6 +1,6 @@
 # APQ
 
-#Label-Free Absolute Protein Quantification with Data-Independent Acquisition
+## Label-Free Absolute Protein Quantification with Data-Independent Acquisition
 
 #This is an R package for label-free absolute protein quantification (APQ) using data-independent acquisition (DIA).
 
@@ -9,11 +9,11 @@
 
 ########################################################
 
-#Installation of this package on R:
+### Installation of this package on R:
 
 #Run this command if package "devtools" wasn't installed
 
-install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+**install.packages(c("devtools", "roxygen2", "testthat", "knitr"))**
 
 #Load package "devtools"
 
@@ -26,20 +26,20 @@ devtools::install_github("hebinghb/APQ")
 
 #######################################################
 
-#Demo code for DIA-APQ analysis:
+### Demo code for DIA-APQ (DIA-TPA) analysis:
 
 #Load package "APQ"
 library(APQ)
 
 #Load DIA data
 
-##For MS2 data from Spectronaut
+#### For MS2 data from Spectronaut
 
 data<-Import(filename="20181028_202636_HLS9_36_WILD_Report.csv",filetype="spectronaut")
 
 ##20181028_202636_HLS9_36_WILD_Report.csv should include following columns: "R.FileName", "PG.ProteinAccessions", "EG.StrippedSequence", "F.PeakArea". CSV and TSV format are supported in current version.
 
-##For MS2 data from Skyline
+#### For MS2 data from Skyline
 
 data<-Import(filename="Transition Results.csv",filetype="skyline")
 
@@ -58,7 +58,7 @@ write.table(quantity,file="DIA_demo.txt")
 
 #This package also supports APQ analysis using data-dependent acquisition (DDA).
 
-#Demo code for DDA-APQ analysis:
+### Demo code for DDA-APQ (DDA-TPA) analysis:
 
 #Load package "APQ"
 
