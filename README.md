@@ -4,8 +4,8 @@ This is an R package for label-free absolute protein quantification (APQ) using 
 
 This package was developed based on TPA method and an algorithm that redistribute the MS signals from shared peptides to individual proteins or isoforms.
 
-Citation 
-Bing He,Jian Shi, Xinwen Wang, Hui Jiang, Hao-Jie Zhu."Label-free absolute protein quantification with data-independent acquisition."J Proteomics. 2019 May 30;200:51-59. doi: 10.1016/j.jprot.2019.03.005.
+### Citation 
+Bing He,Jian Shi, Xinwen Wang, Hui Jiang, Hao-Jie Zhu."Label-free absolute protein quantification with data-independent acquisition."*J Proteomics*. 2019 May 30;200:51-59. doi: [10.1016/j.jprot.2019.03.005](https://doi.org/10.1016/j.jprot.2019.03.005).
 
 ##
 ### Installation of "APQ" package on R:
