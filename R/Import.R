@@ -93,7 +93,7 @@ Import.DDA <- function(filename, ...) {
 		temp_data <- raw_data[-(grep("CON_",Proteins)),]
 		Proteins <- temp_data$Leading.razor.protein
 		clean_data <- temp_data[-(grep("REV_",Proteins)),]
-		ms_data <- clean_data[c("Proteins","Gene.names","Protein.names",colname[grep("Intensity.",colname)])]
+		ms_data <- clean_data[c("Proteins",colname[grep("Intensity.",colname)])]
 		temp_data <- clean_data[c(colname[grep("Intensity.",colname)])]
 		ms_data <- ms_data[apply(temp_data, 1, function(x) !all(x == 0)),]
 		cat("Done\n")
