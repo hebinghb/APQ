@@ -90,11 +90,19 @@ Import.DDA <- function(filename, ...) {
 		colname <- colnames(raw_data)
 		# Remove Contamination
 		Proteins <- raw_data$Proteins
-		temp_data <- raw_data[-(grep("CON_",Proteins)),]
+		if(length(grep("CON_",Proteins))!=0){
+		   temp_data <- raw_data[-(grep("CON_",Proteins)),]
+		}else{
+		   temp_data <- raw_data
+		}
 		Proteins <- temp_data$Leading.razor.protein
-		clean_data <- temp_data[-(grep("REV_",Proteins)),]
-		ms_data <- clean_data[c("Proteins",colname[grep("Intensity.",colname)])]
-		temp_data <- clean_data[c(colname[grep("Intensity.",colname)])]
+		if(length(grep("REV_",Proteins))!=0){
+		   clean_data <- temp_data[-(grep("REV_",Proteins)),]
+		}else{
+		   clean_data <- temp_data
+		}
+		ms_data <- clean_data[c("Proteins",colname[grep("Intensity",colname)])]
+		temp_data <- clean_data[c(colname[grep("Intensity",colname)])]
 		ms_data <- ms_data[apply(temp_data, 1, function(x) !all(x == 0)),]
 		cat("Done\n")
 		return(ms_data)

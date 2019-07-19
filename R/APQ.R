@@ -16,12 +16,14 @@ APQ.default <- function(ms_data, datatype, ...) {
          }
          colnames(final_APQ) <- samples
          final_APQ[final_APQ == 0] <- NA
-         final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]
+         if(!all(!is.na(final_APQ))){
+            final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]
+         }
          return(final_APQ)
      }
      if(datatype == "DDA"){
-       total_ms1 <- apply(ms_data[-(1:3)],2,sum)
-       samples <- colnames(ms_data[-(1:3)])
+       total_ms1 <- apply(ms_data[-1],2,sum)
+       samples <- colnames(ms_data[-1])
        final_APQ <- list()
        for(sample_name in samples){
           protein_ms1 <- as.matrix(tapply(ms_data[[sample_name]],ms_data$Proteins,sum))
@@ -29,13 +31,15 @@ APQ.default <- function(ms_data, datatype, ...) {
           protein_APQ <- 1000*new_ms1/as.numeric(total_ms1[sample_name])
           final_APQ <- cbind(final_APQ,protein_APQ)
        }
-       colname <- gsub("Intensity.","",samples)
+       colname <- gsub("Intensity","",samples)
        colnames(final_APQ) <- colname
        final_APQ[final_APQ == 0] <- NA
        final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]   
        final_APQ <- Clean(final_APQ)
        final_APQ[final_APQ == 0] <- NA
-       final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]       
+       if(!all(!is.na(final_APQ))){
+          final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]       
+       }
        return(final_APQ)
      }
 }
