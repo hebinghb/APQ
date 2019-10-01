@@ -31,7 +31,7 @@ APQ.default <- function(ms_data, datatype, ...) {
           protein_APQ <- 1000*new_ms1/as.numeric(total_ms1[sample_name])
           final_APQ <- cbind(final_APQ,protein_APQ)
        }
-       colname <- gsub("Intensity","",samples)
+       colname <- gsub("Intensity.","",samples)
        colnames(final_APQ) <- colname
        final_APQ[final_APQ == 0] <- NA
        final_APQ <- final_APQ[apply(final_APQ, 1, function(x) !all(is.na(x))),]   
