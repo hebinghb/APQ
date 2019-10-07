@@ -32,7 +32,7 @@ Bing He, Jian Shi, Xinwen Wang, Hui Jiang, Hao-Jie Zhu."Label-free absolute prot
 #### APQ analysis
     quantity<-APQ(data,"DIA") #DIA indicates you are using DIA data.
 #### Write APQ result to a file
-    write.table(quantity,file="DIA_demo.txt")
+    write.csv(quantity,file="DIA_demo.csv")
 
 
 
@@ -49,4 +49,4 @@ Bing He, Jian Shi, Xinwen Wang, Hui Jiang, Hao-Jie Zhu."Label-free absolute prot
 #### APQ analysis
     quantity<-APQ(data,"DDA") #DDA indicates you are using DDA data.
 #### Write APQ result to a file
-    write.table(quantity,file="DDA_demo.txt")
+    write.csv(quantity,file="DDA_demo.csv")
