@@ -22,6 +22,7 @@ APQ.default <- function(ms_data, datatype, ...) {
          return(final_APQ)
      }
      if(datatype == "DDA"){
+       ms_data$Proteins<-as.character(ms_data$Proteins)
        total_ms1 <- apply(ms_data[-1],2,sum)
        samples <- colnames(ms_data[-1])
        final_APQ <- list()
