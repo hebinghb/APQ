@@ -58,7 +58,7 @@ Redistribution <- function(protein_ms){
 
           }
           
-          if(total_uniq_ms > 0){
+          if(total_uniq_ms > 0 & !is.na(protein_ms[protein,1])){
              for(temp_protein in unlist(strsplit(protein,";"))){
                 if(temp_protein %in% proteins && !is.na(protein_ms[temp_protein,1])){ 
                   share2uniq_ms[temp_protein,1] <- share2uniq_ms[temp_protein,1] + (protein_ms[temp_protein,1]/total_uniq_ms)*protein_ms[protein,1]
