@@ -81,7 +81,7 @@ Clean <- function(APQ){
           for(temp_protein in unlist(strsplit(protein,";"))){
              if(is.na(proteinfrequency[temp_protein])){
                 if(temp_protein %in% proteins){
-                  proteinfrequency[temp_protein] <- 10
+                  proteinfrequency[temp_protein] <- 1000
                 }else{
                   proteinfrequency[temp_protein] <- 1
                 }
@@ -115,7 +115,10 @@ Clean <- function(APQ){
                if(!new_protein %in% temp_rowname){  
                  temp_rowname[which(temp_rowname == protein)] <- new_protein
                  rownames(clean_apq) <- temp_rowname
-               }
+               }else if (new_protein!=protein){
+                 clean_apq[new_protein,] <- unlist(clean_apq[new_protein,]) + unlist(clean_apq[protein,]) 
+                 clean_apq[protein,] <- NA
+	       }
           }
       } 
       return(clean_apq)
