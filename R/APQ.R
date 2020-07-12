@@ -1,5 +1,4 @@
-APQ<-function(ms_data, ...) UseMethod("APQ")
-APQ.default <- function(ms_data, datatype, ...) {
+APQ <- function(ms_data, datatype, ...) {
      	if (!datatype %in% c("DIA","DDA")) {
 		   stop("Please select a valid datatype. e.g.:  \"DIA\", \"DDA\"")
 	   }
