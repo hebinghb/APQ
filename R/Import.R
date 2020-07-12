@@ -1,6 +1,4 @@
-Import<-function(filename, filetype, ...) UseMethod("Import")
-
-Import.default <- function(filename, filetype, ...) {
+Import <- function(filename, filetype, ...) {
 	if (!filetype %in% c("spectronaut","skyline")) {
 		stop("Please select a valid filetype. Options:  \"spectronaut\", \"skyline\"")
 	}
