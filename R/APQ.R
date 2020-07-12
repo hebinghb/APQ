@@ -12,7 +12,14 @@ APQ.default <- function(ms_data, datatype, ...) {
             protein_ms2 <- as.matrix(tapply(sample_data$PeakArea,sample_data$ProteinName,sum))
             new_ms2 <- Redistribution(protein_ms2)
             protein_APQ <- 1000*new_ms2/as.numeric(total_ms2[sample_name])
-            final_APQ <- cbind(final_APQ,protein_APQ)
+            if(length(final_APQ)>0){
+               final_APQ <- merge(final_APQ,protein_APQ,by="row.names",all=T)
+               row.names(final_APQ)<-final_APQ$Row.names
+               final_APQ<-final_APQ[,-1]
+               colnames(final_APQ)<-1:ncol(final_APQ)
+            }else{
+               final_APQ<-protein_APQ
+            }
          }
          colnames(final_APQ) <- samples
          final_APQ[final_APQ == 0] <- NA
