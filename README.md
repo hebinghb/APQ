@@ -33,7 +33,10 @@ Bing He, Jian Shi, Xinwen Wang, Hui Jiang, Hao-Jie Zhu."Label-free absolute prot
     quantity<-APQ(data,"DIA") #DIA indicates you are using DIA data.
 #### Write APQ result to a file
     write.csv(quantity,file="DIA_demo.csv")
-
+#### Protein id annotation
+    Annotated.quantity<-Annotate(quantity) #Annotate protein id with gene symbol and description. Note: This function needs internet connection.
+#### Write Annotated APQ result to a file
+    write.csv(Annotated.quantity,file="DIA_demo.csv",row.names=FALSE)
 
 
 
