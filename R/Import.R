@@ -107,6 +107,7 @@ Import.DDA <- function(filename, ...) {
 		     }
 		temp_data <- clean_data[c(colname[grep("Intensity",colname)])]
 		ms_data <- ms_data[apply(temp_data, 1, function(x) !all(x == 0)),]
+		ms_data[is.na(ms_data)] <- 0			 
 		cat("Done\n")
 		return(ms_data)
   
